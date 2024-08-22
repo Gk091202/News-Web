@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewzNowTech</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="" class="company-logo">
+                <img src="https://newznow.tech/NewsNowTech.png" alt="logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="home" onClick="onNavItemClick('home')">Home</li>
+                    <li class="hover-link nav-item" id="startups" onClick="onNavItemClick('startups')">Startups</li>
+                    <li class="hover-link nav-item" id="technology" onClick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover-link nav-item" id="employment" onClick="onNavItemClick('employment')">Employment</li>
+                    <li class="hover-link nav-item" id="jobs" onClick="onNavItemClick('jobs')">Jobs</li>
+                    <li class="hover-link nav-item" id="aboutus" onClick="onNavItemClick('aboutus')">About Us</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id="search-text" placeholder="e.g. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cardscontainer">
+            <!-- News cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">Source 01/01/2024</h6>
+                <p class="news-desc" id="news-desc">Description of the news article goes here...</p>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>
